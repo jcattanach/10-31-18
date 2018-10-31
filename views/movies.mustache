@@ -1,0 +1,25 @@
+<html>
+<head>
+</head>
+<body>
+  <h1>Movies</h1>
+  <a href="/add-movies" >Add movie</a>
+  <ul>
+    {{#moviePostsElement}}
+
+    <li>
+      <form action='/delete-movie' method='POST' >
+      <input type='hidden' name='movieName' value='{{movieName}}'/>
+      <h3>{{movieName}}</h3>
+      <img src='{{movieImgURL}}' />
+      <p> {{movieYear}} </p>
+      <p> {{movieGenre}} </p>
+      <p> {{movieDescription}} </p>
+      <input type="submit" value="Remove" />
+    </form>
+    </li>
+
+    {{/moviePostsElement}}
+  </ul>
+</body>
+</html>

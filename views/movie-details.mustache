@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+  <h1>{{movieName}}</h1>
+  <a href="/movies/all" >Back to all movies</a>
+  <ul>
+    {{#moviePostsElement}}
+
+    <li>
+      <h3>{{movieName}}</h3>
+      <img src='{{movieImgURL}}' />
+      <p> {{movieYear}} </p>
+      <p> {{movieGenre}} </p>
+      <p> {{movieDescription}} </p>
+    </li>
+
+    {{/moviePostsElement}}
+  </ul>
+</body>
+</html>
